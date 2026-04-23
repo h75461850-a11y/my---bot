@@ -230,4 +230,4 @@ async def give_roles(interaction: discord.Interaction, 유저: discord.Member, �
     await bot.get_channel(log_channel_id).send(embed=log_embed)
     await interaction.response.send_message("✅ 지급 완료.", ephemeral=True)
 
-bot.run('DISCORD_TOKEN')
+bot.run(os.environ.get('DISCORD_TOKEN'))
